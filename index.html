@@ -54,11 +54,6 @@
 		<button id="submitButton">Submit</button>
 	</div>
 
-	<div id="encouragementForm">
-		<h2>Leave some words of encouragement here:</h2>
-		<textarea id="encouragementText" placeholder="Type your words of encouragement..."></textarea><br>
-		<button id="submitButton">Submit</button>
-	</div>
 	<div id="encouragementMessage"></div>
 	<ul id="encouragementList"></ul>
 
@@ -79,9 +74,9 @@
 			var encouragementText = $("#encouragementText").val().trim();
 
 			if (encouragementText) {
-
 				$("#encouragementList").append("<li>" + encouragementText + "</li>");
 				$("#encouragementText").val("");
+				$("#encouragementMessage").html("<h3>Thank you for your encouragement:</h3><p>" + encouragementText + "</p>");
 			} else {
 				$("#encouragementMessage").html("<p style='color: #271618;'>Please say something nice before you submit!.</p>");
 			}
