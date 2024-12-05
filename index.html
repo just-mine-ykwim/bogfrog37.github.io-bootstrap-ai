@@ -22,7 +22,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-<h1>Virginia Russell</h1>
+<h1 class="myName">Virginia Russell</h1>
 <div class="MyPic"><img src="https://res.cloudinary.com/dbw2zb2ij/image/upload/v1726186793/my-face-red_oa7cep.jpg"/></div>
 <h2>My Web Design Experience</h2>
 <p>I don't have that much firsthand experience with web programming and development. Before this semester, I only took two classes on the subject and I had not ever independently learned about it.</p>
@@ -32,6 +32,7 @@
 <p>I'm kind of pivoting towards becoming a DBA so I don't know how much I'll use these skills on the job, but I still think they're extremely useful to have in my arsenal in the modern age.</p>
     <script type="text/javascript">
 	$(document).ready(function() {
+		$("h1").removeClass("myName").hide().fadeIn(1000);
 		$(".MyPic").hover(
 			function() {
 				$(this).find("img").attr("src", "https://res.cloudinary.com/djbjylmzr/image/upload/c_fill,w_450,h_338/v1731690448/pexels-pixabay-45863_uho7va.jpg");
