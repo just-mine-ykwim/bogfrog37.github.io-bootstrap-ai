@@ -4,19 +4,20 @@
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<title>Gin's Website</title>
 <style>
-h1 {text-align: center;
+  h1, h2, h3 {text-align: center;
     color: #182716;
     background-color: #ffe2ee}
-h2 {text-align: center;
-    color: #182716;
-    background-color: #ffe2ee}
-h3 {text-align: center;
-   color: #182716;
-   background-color: #ffe2ee;}
-body {text-align: center;
+	
+  body {text-align: center;
     color: #2f4e2c;
     background-color: #d0e7d0;}
-p {background-color: #ffe2ee;}
+	
+  p {background-color: #ffe2ee;}
+	
+  .MyPic img {
+    width: 100%;
+    max-width: 450px;
+    transition: transform 0.3s ease, opacity 0.3s ease;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -29,3 +30,19 @@ p {background-color: #ffe2ee;}
 <p>I would like to gain a solid grasp on developer tools for web design and programming. I feel mostly comfortable with HTML and CSS, so I would like to continue to sharpen those skills in addition to gaining practical knowledge about designing functional complex websites.</p>
 <h2>My future with web design</h2>
 <p>I'm kind of pivoting towards becoming a DBA so I don't know how much I'll use these skills on the job, but I still think they're extremely useful to have in my arsenal in the modern age.</p>
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$(".MyPic").hover(
+			function() {
+				$(this).find("img").attr("src", "https://res.cloudinary.com/djbjylmzr/image/upload/c_fill,w_450,h_338/v1731690448/pexels-pixabay-45863_uho7va.jpg");
+				$(this).find("img").css("opacity", "0.8");
+				}, 
+			function() {
+				$(this).find("img").attr("src", "https://res.cloudinary.com/dbw2zb2ij/image/upload/v1726186793/my-face-red_oa7cep.jpg");
+				$(this).find("img").css("opacity", "1");
+			}
+		);
+	});
+	</script>
+</body>
+</html>
