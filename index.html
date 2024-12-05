@@ -24,18 +24,22 @@
 	width: 300px;
 	height: 100px;
 	font-size: 16px;
-	padding: 10px;}
+	padding: 10px;
+    	background-color: #eeffe2;
+    	color: #8b3c4c;}
 
     #submitButton {
 	font-size: 16px;
 	padding: 10px 20px;
 	margin-top: 10px;
-	cursor: pointer;}
+	cursor: pointer;
+    	color: #4c8b3c;}
 
     #encouragementMessage {
 	margin-top: 20px;
 	font-size: 18px;
-	color: #2f4e2c;}
+	background-color: #2f4e2c;
+	color: #8b3c4c;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -74,9 +78,9 @@
 			var encouragementText = $("#encouragementText").val().trim();
 
 			if (encouragementText) {
+				$("#encouragementMessage").html("<h3>Thank you for your encouragement:</h3>");
 				$("#encouragementList").append("<li>" + encouragementText + "</li>");
 				$("#encouragementText").val("");
-				$("#encouragementMessage").html("<h3>Thank you for your encouragement:</h3><p>" + encouragementText + "</p>");
 			} else {
 				$("#encouragementMessage").html("<p style='color: #271618;'>Please say something nice before you submit!.</p>");
 			}
