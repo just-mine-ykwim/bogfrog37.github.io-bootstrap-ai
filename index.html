@@ -40,6 +40,23 @@
 	font-size: 18px;
 	background-color: #2f4e2c;
 	color: #8b3c4c;}
+	
+    body.night {
+	color: #d0e7d0;
+	background-color: #2f4e2c;}
+    h1.night, h2.night, h3.night {
+	color: #ffe2ee;
+	background-color: #182716;}
+    p.night {
+	background-color: #2f4e2c;}
+    textarea.night {
+	background-color: #4c8b3c;
+	color: #ffe2ee;}
+    #submitButton.night {
+	color: #ffe2ee;}
+    #encouragementMessage.night {
+	background-color: #182716;
+	color: #ffe2ee;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -63,6 +80,19 @@
 
     <script type="text/javascript">
 	$(document).ready(function() {
+		function toggleNightMode() {
+			const now = new Date();
+			const hour = now.getHours();
+			const isNight = hour >= 19 || hour < 6;
+
+			if (isNight) {
+				$("body, h1, h2, h3, p, textarea, #submitButton, #encouragementMessage").addClass("night");
+			} else {
+				$("body, h1, h2, h3, p, textarea, #submitButton, #encouragementMessage").removeClass("night");
+			}
+		}
+		toggleNightMode();
+		setInterval(toggleNightMode, 3600000);
 		$("h1").removeClass("myName").hide().fadeIn(4000);
 		$(".MyPic").hover(
 			function() {
