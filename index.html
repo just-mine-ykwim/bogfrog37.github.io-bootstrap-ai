@@ -39,7 +39,8 @@
 	padding: 10px 20px;
 	margin-top: 10px;
 	cursor: pointer;
-    	color: #4c8b3c;}
+    	color: #3e6d34;
+    	background-color: #eeffe2;}
 
     #encouragementMessage {
 	margin-top: 20px;
@@ -62,7 +63,8 @@
 	color: #ffe2ee;}
     #encouragementMessage.night {
 	background-color: #182716;
-	color: #ffe2ee;}
+	color: #eeffe2;
+    	background-color: #3e6d34;}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -127,9 +129,9 @@
 			const isNight = hour >= 19 || hour < 6;
 
 			if (isNight) {
-				$("body, h1, h2, h3, p, textarea, #submitButton, #encouragementMessage").addClass("night");
+				$("body, h1, h2, h3, h4, p, textarea, #submitButton, #encouragementMessage").addClass("night");
 			} else {
-				$("body, h1, h2, h3, p, textarea, #submitButton, #encouragementMessage").removeClass("night");
+				$("body, h1, h2, h3, h4, p, textarea, #submitButton, #encouragementMessage").removeClass("night");
 			}
 		}
 		toggleNightMode();
